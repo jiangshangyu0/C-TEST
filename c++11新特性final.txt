@@ -1,0 +1,33 @@
+c++11新特性之final
+例子1：
+#include<iostream>
+using namespace std;
+struct base1 final
+{
+	
+ } ;
+struct Derivved:base1
+{
+	
+};
+int main()
+{
+	return 0;
+}
+类或者结构体被final关键字声明定义之后，将无法在被派生类继承
+例子2：
+#include<iostream>
+using namespace std;
+struct base2 
+{
+	virtual void f() final;
+ } ;
+struct Derivved2:base2
+{
+	void f();
+};
+int main()
+{
+	return 0;
+}
+类或者结构体中被关键字final声明的虚函数将无法再子类中被重载
